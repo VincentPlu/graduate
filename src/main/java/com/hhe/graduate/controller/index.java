@@ -28,6 +28,11 @@ public class index {
        return prefix + "/index" ;
     }
 
+    @GetMapping("search-results")
+    public String searchResults(){
+        return prefix + "/search-results";
+    }
+
     /*@PostMapping("login")
     @ResponseBody
     public String login(User user){
