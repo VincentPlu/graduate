@@ -25,6 +25,15 @@ spring:
     username: 869872053@qq.com
     password: sjopyrfmhrhbbcih
     default-ending: UTF-8
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 47.114.163.135
+    # Redis端口号
+    port: 6379
+    # Redis连接密码（一般默认为空）
+    password: redis
 # web服务器配置
 server:
   # 服务器的HTTP端口，默认为80

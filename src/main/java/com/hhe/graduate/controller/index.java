@@ -32,16 +32,4 @@ public class index {
     public String searchResults(){
         return prefix + "/search-results";
     }
-
-    /*@PostMapping("login")
-    @ResponseBody
-    public String login(User user){
-        System.out.println(user.getUserLoginname());
-        System.out.println(user.getUserPass());
-        User users = userService.login(user.getUserName(),user.getUserPass());
-        if (users!=null){
-            return "登录成功";
-        }
-        return "我進了這個方法";
-    }*/
 }
