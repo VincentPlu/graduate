@@ -243,6 +243,15 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
+
+  <select id="selectUserById" parameterType="java.lang.String" resultType="BaseResultMap">
+    select <include refid="Base_Column_List" />
+        from user
+        <where>
+          id = #{id}
+        </where>
+  </select>
+
   <update id="updateByExampleSelective" parameterType="map">
     <!--
       WARNING - @mbg.generated

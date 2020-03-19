@@ -11,42 +11,6 @@ dragon:
   #D:/Temp/profile/
   # 获取ip地址开关
   addressEnabled: true
-spring:
-  mvc:
-    view:
-      prifix: /templates/
-      suffix: .html
-    static-path-pattern: /**
-  resources:
-      static-locations: classpath:/static/
-  # 模板引擎
-  thymeleaf:
-    prefix: classpath:/templates/
-    encoding: utf-8
-    # 禁用缓存
-    cache: false
-    suffix: .html  #mybatis数据源
-  datasource:
-    url: jdbc:mysql://localhost:3306/graduate?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: a
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  #邮件发送
-  mail:
-    #邮箱服务器地址
-    host: smtp.qq.com
-    username: 869872053@qq.com
-    password: sjopyrfmhrhbbcih
-    default-ending: UTF-8
-  redis:
-    # Redis数据库索引（默认为0）
-    database: 0
-    # Redis服务器地址
-    host: 47.114.163.135
-    # Redis端口号
-    port: 6379
-    # Redis连接密码（一般默认为空）
-    password: redis
 # web服务器配置
 server:
   # 服务器的HTTP端口，默认为80
@@ -67,3 +31,40 @@ server:
 mail:
   fromMail:
     addr: 869872053@qq.com
+spring:
+  mvc:
+    view:
+      prifix: /templates/
+      suffix: .html
+    static-path-pattern: /**
+  resources:
+      static-locations: classpath:/static/
+  # 模板引擎
+  thymeleaf:
+    prefix: classpath:/templates/
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+    suffix: .html  #mybatis数据源
+  datasource:
+    url: jdbc:mysql://47.114.163.135:3306/graduate?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #邮件发送
+  mail:
+    #邮箱服务器地址
+    host: smtp.qq.com
+    username: 869872053@qq.com
+    password: sjopyrfmhrhbbcih
+    default-ending: UTF-8
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 47.114.163.135
+    # Redis端口号
+    port: 6379
+    # Redis连接密码（一般默认为空）
+    password: redis
+
