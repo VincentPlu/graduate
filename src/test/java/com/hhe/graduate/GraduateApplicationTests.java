@@ -25,7 +25,10 @@ class GraduateApplicationTests {
 
     @Test
     void sqltest(){
-        User user = userService.selectUserById("001");
-        System.out.println(user.getUserLoginname());
+        User user = new User();
+        user.setUserName("何浩");
+        user.setUserPass("123");
+        int result = userService.login(user);
+        System.out.println(result);
     }
 }

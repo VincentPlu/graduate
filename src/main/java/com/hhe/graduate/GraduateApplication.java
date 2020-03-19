@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.hhe.graduate.dao")
+@MapperScan("com.hhe.graduate.mapper")
 public class GraduateApplication {
 
     public static void main(String[] args) {
