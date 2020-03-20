@@ -28,6 +28,16 @@ public class index {
        return prefix + "/index" ;
     }
 
+    @GetMapping("search")
+    public String search(ModelMap modelMap){
+        User user = new User();
+        user.setId("001");
+        user.setUserName("hhe");
+        user.setUserPass("123");
+        modelMap.put("User",user);
+        return prefix + "/search" ;
+    }
+
     @GetMapping("search-results")
     public String searchResults(){
         return prefix + "/search-results";

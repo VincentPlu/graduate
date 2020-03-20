@@ -46,6 +46,7 @@ spring:
     # 禁用缓存
     cache: false
     suffix: .html  #mybatis数据源
+    mode: LEGACYHTML5
   datasource:
     url: jdbc:mysql://47.114.163.135:3306/graduate?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
