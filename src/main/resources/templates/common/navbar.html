@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--导航栏-->
+<div th:fragment="nav_top">
+    <ul class="layui-nav layui-bg-cyan">
+        <li class="layui-nav-item layui-this">
+            <a href="">网站首页</span></a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="">个人中心</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img"><label th:text="${User.userName}"></label></a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">修改信息</a></dd>
+                <dd><a href="javascript:;">安全管理</a></dd>
+                <dd><a href="javascript:;">退了</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+</html>

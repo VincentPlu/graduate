@@ -22,7 +22,7 @@ public class index {
     public String index(ModelMap modelMap){
         User user = new User();
         user.setId("001");
-        user.setUserName("hhe");
+        user.setUserName("何浩");
         user.setUserPass("123");
         modelMap.put("User",user);
        return prefix + "/index" ;
