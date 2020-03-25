@@ -13,13 +13,6 @@
 <div th:include="common/navbar :: nav_top"></div>
 <!--页面主体开始-->
 <!--图片轮播框-->
-<div class="layui-carousel" id="lunbo">
-    <div carousel-item>
-        <div><img alt="轮播图片" src="/images/first.jpg" class="lunboPic"></div>
-        <div><img alt="轮播图片" src="/images/第二张轮播图.jpg" class="lunboPic"></div>
-        <div><img alt="轮播图片" src="/images/白云四桶.jpg" class="lunboPic"></div>
-    </div>
-</div>
 <div class="layui-row" style="margin-top: 90px;">
     <div class="layui-row" style="text-align: center"><h1 class="layui-anim layui-anim-scaleSpring">垃 / 圾 / 简 / 介</h1></div>
     <div class="layui-row" style="text-align: center;margin-top: 10px;"><h3>Refuse Introduction</h3></div>
@@ -86,7 +79,7 @@
                     </div>
                 </div>
                 <!--有害垃圾类-->
-                <div class="layui-tab-item layui-show">
+                <div class="layui-tab-item">
                     <div class="layui-col-md3" style="background-color: #f6f6f6;">
                         <img src="/images/电池.jpg" height="276.36px" width="276.36px">
                         <br><br>
@@ -115,33 +108,74 @@
                 <!--厨余垃圾类-->
                 <div class="layui-tab-item">
                     <div class="layui-col-md3" style="background-color: #f6f6f6;">
-                        <img src="/images/电池.jpg" height="276.36px" width="276.36px">
+                        <img src="/images/残羹冷炙.jpg" height="276.36px" width="276.36px">
                         <br><br>
-                        <h3 style="text-align: center"><a>电池类</a></h3>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;充电电池,镉镍电池,铅酸电池,蓄电池...</span>
+                        <h3 style="text-align: center"><a>残羹冷炙</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;剩饭,餐桌上的剩菜,剩余的流质食物....</span>
                     </div>
                     <div class="layui-col-md3" style="background-color: #f6f6f6;">
-                        <img src="/images/灯管.png" height="276.36px" width="276.36px">
+                        <img src="/images/果皮.jpg" height="276.36px" width="276.36px">
                         <br><br>
-                        <h3 style="text-align: center"><a>含汞类</a></h3>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;荧光灯,废节能灯,废水银温度计,其他...</span>
+                        <h3 style="text-align: center"><a>瓜果皮核</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;各种水果的果皮,果核,其他...</span>
                     </div>
                     <div class="layui-col-md3" style="background-color: #f6f6f6;">
-                        <img src="/images/药品.jpg" height="276.36px" width="276.36px">
+                        <img src="/images/鱼骨.jpg" height="276.36px" width="276.36px">
                         <br><br>
-                        <h3 style="text-align: center"><a>废药类</a></h3>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;过期药物,药物胶囊,药片,药品内包装...</span>
+                        <h3 style="text-align: center"><a>固体残渣</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;肉块,蛋壳,碎骨头,茶渣,蛤蜊,其他...</span>
                     </div>
                     <div class="layui-col-md3" style="background-color: #f6f6f6;">
-                        <img src="/images/油漆.png" height="276.36px" width="276.36px">
+                        <img src="/images/落叶.jpg" height="276.36px" width="276.36px">
                         <br><br>
-                        <h3 style="text-align: center"><a>油漆类</a></h3>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;废农药,废油漆,废颜料,杀虫剂等...</span>
+                        <h3 style="text-align: center"><a>盆栽落叶</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;各种盆栽植物的落叶,菜帮,菜叶...</span>
                     </div>
                 </div>
-                <div class="layui-tab-item">4</div>
+                <!--其他垃圾-->
+                <div class="layui-tab-item">
+                    <div class="layui-col-md3" style="background-color: #f6f6f6;">
+                        <img src="/images/卫生纸.png" height="276.36px" width="276.36px">
+                        <br><br>
+                        <h3 style="text-align: center"><a>水溶性强物</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;餐巾纸,湿纸巾,卫生纸,纸尿裤...</span>
+                    </div>
+                    <div class="layui-col-md3" style="background-color: #f6f6f6;">
+                        <img src="/images/陶瓷.jpg" height="276.36px" width="276.36px">
+                        <br><br>
+                        <h3 style="text-align: center"><a>陶瓷制品</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;碗碟,花瓶,茶壶,茶杯等陶瓷制品...</span>
+                    </div>
+                    <div class="layui-col-md3" style="background-color: #f6f6f6;">
+                        <img src="/images/烟灰.jpg" height="276.36px" width="276.36px">
+                        <br><br>
+                        <h3 style="text-align: center"><a>碎屑</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;烟灰,坚果,贝壳,灰尘,发丝,其他...</span>
+                    </div>
+                    <div class="layui-col-md3" style="background-color: #f6f6f6;">
+                        <img src="/images/打包盒.jpg" height="276.36px" width="276.36px">
+                        <br><br>
+                        <h3 style="text-align: center"><a>一次性用品</a></h3>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;打包盒,筷子,一次性餐盒,一次性杯子...</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="layui-row" style="margin-top: 150px;">
+    <div  class="layui-col-md-offset2" style="position: absolute">
+        <img src="/images/lunbo/第二张轮播图.jpg" alt="一张图片" style="height: 400px;width: 1170px;">
+    </div>
+    <div class="layui-col-md-offset4 text-area" style="position: relative;">
+        <br><br><br><br>
+        <h2>垃圾分类的好处</h2>
+        <br><br>
+        1、将易腐有机成分为主的厨房垃圾单独分类，为垃圾堆肥提供优质原料，生产出<br>优质有机肥，有利于改善土壤肥力，减少化肥施用量。<br>
+        2、将有害垃圾分类出来，减少了垃圾中的重金属、有机污染物、致病菌的含量，<br>有利于垃圾的无害化处理，减少了垃圾处理的水、土壤、大气污染风险。<br>
+        3、普及环保与垃圾的知识，提升全社会对环卫行业的认知，减少环卫工人的工作<br>难度，形成尊重、关心环卫工人的氛围。<br>
+        4、提高了废品回收利用的比例，减少了原材料的需求，减少二氧化碳的排放。<br>
+        5、如果对垃圾进行分类处理，就可以减少需要掩埋的垃圾，同时也可以减少占用土地资源。<br>
     </div>
 </div>
 </body>

@@ -1,0 +1,16 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: header(~{::title})">
+    <meta charset="UTF-8">
+    <title>分类查询</title>
+</head>
+<body>
+<div th:replace="common/header :: jsAndCss(~{::script})">
+    <!--将需要额外添加的js文件写入到div之中即可，并且上方花括号中需要写入 script-->
+    <script type="text/javascript"   th:src="@{/js/index.js}"></script>
+</div>
+<!--引入页面导航栏模块-->
+<div th:include="common/navbar :: nav_top"></div>
+<!--页面主体开始-->
+</body>
+</html>
