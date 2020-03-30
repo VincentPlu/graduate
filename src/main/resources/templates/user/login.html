@@ -16,7 +16,7 @@
 <!-- Head -->
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
-        <div class="layui-col-sm12 layui-col-md12 zyl_mar_01">
+        <div class="layui-col-sm6 layui-col-md6 zyl_mar_01">
             <blockquote class="layui-elem-quote">登 录 界 面</blockquote>
         </div>
     </div>
@@ -67,16 +67,16 @@
         <legend>欢迎登陆</legend>
     </fieldset>
     <div class="layui-row layui-col-space15">
-        <form class="layui-form zyl_pad_01" action="">
+        <form class="layui-form zyl_pad_01">
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
-                    <input type="text" name="userName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
+                    <input type="text" name="userLoginName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
                     <i class="layui-icon layui-icon-username zyl_lofo_icon"></i>
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
-                    <input type="password" name="nuse" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
+                    <input type="password" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
                     <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
                 </div>
             </div>
@@ -94,9 +94,15 @@
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
-                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="demo1">立即登录</button>
+                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="login">立即登录</button>
             </div>
         </form>
+        <div class="layui-col-sm12 layui-col-md12">
+            <a href="/reg">注册</a>
+        </div>
+        <div class="layui-col-sm12 layui-col-md12">
+            <a href="/findPass">忘记密码</a>
+        </div>
     </div>
 </div>
 <!-- LoginForm End -->
@@ -112,5 +118,8 @@
 <script type="text/javascript" src=" /assembly/zylVerificationCode.js"></script>-->
 <!--login Js-->
 <script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>

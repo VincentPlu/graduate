@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class login {
     @GetMapping("/login")
     public String login(){
-        return "user/index";
+        return "user/login";
     }
 
     @GetMapping("/reg")
