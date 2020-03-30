@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>忘记密码界面</title>
+    <link rel="stylesheet" href=" /public/layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href=" /css/login.css" media="all"/>
+    <style>
+        /* 覆盖原框架样式 */
+        .layui-elem-quote{background-color: inherit!important;}
+        .layui-input, .layui-select, .layui-textarea{background-color: inherit; padding-left: 30px;}
+    </style>
+</head>
+<body>
+<!-- Head -->
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-sm12 layui-col-md12 zyl_mar_01">
+            <blockquote class="layui-elem-quote">忘 记 密 码 界 面</blockquote>
+        </div>
+    </div>
+</div>
+<!-- Head End -->
+
+<!-- Carousel -->
+<div class="layui-row">
+    <div class="layui-col-sm12 layui-col-md12">
+        <div class="layui-carousel zyl_login_height" id="zyllogin" lay-filter="zyllogin">
+            <div carousel-item="">
+                <div>
+                    <div class="zyl_login_cont"></div>
+                </div>
+                <div>
+                    <img src="/images/login/01.jpg"/>
+                </div>
+                <div>
+                    <div class="background">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div>
+                    <img src="/images/login/03.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Footer -->
+<div class="layui-row">
+    <div class="layui-col-sm12 layui-col-md12 zyl_center zyl_mar_01">
+        © 2019 - 忘记密码界面 || 忘记密码界面版权所有
+    </div>
+</div>
+<!-- Footer End -->
+
+
+
+<!-- LoginForm -->
+<div class="zyl_lofo_main">
+    <fieldset class="layui-elem-field layui-field-title zyl_mar_02">
+        <legend>欢迎登陆</legend>
+    </fieldset>
+    <div class="layui-row layui-col-space15">
+        <form class="layui-form zyl_pad_01">
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-form-item">
+                    <input type="text" name="userLoginName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
+                    <i class="layui-icon layui-icon-username zyl_lofo_icon"></i>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-form-item">
+                    <input type="password" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
+                    <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-form-item">
+                    <input type="password" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="确认密码" class="layui-input">
+                    <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <div class="layui-row">
+                    <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
+                        <div class="layui-form-item">
+                            <input type="text" name="vercode" id="vercode" lay-verify="required|vercodes" autocomplete="off" placeholder="验证码" class="layui-input" maxlength="6">
+                            <i class="layui-icon layui-icon-vercode zyl_lofo_icon"></i>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs4 layui-col-sm4 layui-col-md4">
+                        <div class="zyl_lofo_vercode zylVerCode" onclick="zylVerCode()"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-sm12 layui-col-md12">
+                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="login">立即登录</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- LoginForm End -->
+
+
+<!-- Jquery Js -->
+<script type="text/javascript" src=" /public/jquery/jquery-3.4.1.js"></script>
+<!-- Layui Js -->
+<script type="text/javascript" src=" /public/layui/layui.js"></script>
+<!-- Jqarticle Js -->
+<script type="text/javascript" src=" /assembly/jparticle.min.js"></script>
+<!-- ZylVerificationCode Js
+<script type="text/javascript" src=" /assembly/zylVerificationCode.js"></script>-->
+<!--login Js-->
+<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
