@@ -2,6 +2,9 @@ $(function(){
     zylVerCode();//初始化生成随机数
 });
 
+
+
+
 //生成验证码
 function zylVerCode(len){
     len = len || 4;
@@ -21,11 +24,11 @@ layui.use(['carousel', 'form'], function(){
     //自定义验证规则
     form.verify({
         userName: function(value){
-            if(value.length < 5){
+            if(value.length < 2){
                 return '账号至少得5个字符';
             }
         }
-        ,pass: [/^[\S]{6,12}$/,'密码必须6到12位，且不能出现空格']
+        ,pass: [/^[\S]{0,3}$/,'密码必须6到12位，且不能出现空格']
         ,vercodes: function(value){
             //获取验证码
             var zylVerCode = $(".zylVerCode").html();
@@ -38,11 +41,7 @@ layui.use(['carousel', 'form'], function(){
         }
     });
 
-    //监听提交
-    form.on('submit(login)', function(data){
-        console.log(data)
-        return false;
-    });
+
 
 
     //设置轮播主体高度
@@ -82,3 +81,26 @@ layui.use(['carousel', 'form'], function(){
         }
     });
 });
+
+function tologin() {
+    var username = $("#userLoginName").val();
+    var password = $("#userPass").val();
+
+    $.ajax({
+        url: "/tologin",
+        type: "post",
+        dataType:"text",
+        data: {
+            "username": username,
+            "password": password
+        },
+        success:function (result) {
+            if (result == "success") {
+                location.href = "pages/index";
+            }
+        },
+        error:function (e) {
+            
+        }
+    })
+}

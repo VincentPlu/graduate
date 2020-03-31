@@ -7,14 +7,12 @@ import com.hhe.graduate.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
-
 
 @Service("userService")
 public class UserServiceImp implements UserService {
     @Autowired
-    UserMapper userMapper;
+    private UserMapper userMapper;
 
     @Override
     public int login(User user) {
@@ -24,5 +22,10 @@ public class UserServiceImp implements UserService {
         criteria.andUserPassEqualTo(user.getUserPass());
         List<User> list = userMapper.selectByExample(userExample);
         return list.size();
+    }
+
+    @Override
+    public User selectUser(String username) {
+        return userMapper.selectUser(username);
     }
 }

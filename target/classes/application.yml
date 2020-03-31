@@ -68,4 +68,8 @@ spring:
     port: 6379
     # Redis连接密码（一般默认为空）
     password: redis
-
+mybatis:
+  #注意：一定要对应mapper映射xml文件的所在路径
+  mapper-locations: classpath:/static/mapper/*.xml
+  # 注意：对应实体类的路径
+  type-aliases-package: com.hhe.graduate.bean
