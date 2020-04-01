@@ -345,13 +345,21 @@
     insert into user (id, user_name, user_loginName, user_pass,
     user_sex, user_head, user_integrals,
     user_type, user_email, user_remark,
-    user_create_time, update_time, del_flag
+    user_create_time, update_time, del_flag, state, code
     )
     values (#{id,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR}, #{userLoginname,jdbcType=VARCHAR}, #{userPass,jdbcType=VARCHAR},
     #{userSex,jdbcType=VARCHAR}, #{userHead,jdbcType=VARCHAR}, #{userIntegrals,jdbcType=INTEGER},
     #{userType,jdbcType=CHAR}, #{userEmail,jdbcType=VARCHAR}, #{userRemark,jdbcType=VARCHAR},
-    #{userCreateTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{delFlag,jdbcType=INTEGER}
+    #{userCreateTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{delFlag,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}
     )
   </insert>
+
+  <select id="activate" parameterType="java.lang.String" resultType="java.lang.Integer">
+    select count(*) from user where code = #{code}
+  </select>
+
+  <update id="updateState" parameterType="java.lang.String">
+    update user set state = 1 where code = #{code}
+  </update>
 
 </mapper>

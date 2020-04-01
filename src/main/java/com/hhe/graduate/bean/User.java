@@ -29,6 +29,10 @@ public class User {
 
     private Integer delFlag;
 
+    private Integer state;
+
+    private String code;
+
     public String getId() {
         return id;
     }
@@ -131,5 +135,21 @@ public class User {
 
     public void setDelFlag(Integer delFlag) {
         this.delFlag = delFlag;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 }

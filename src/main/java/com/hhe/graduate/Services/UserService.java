@@ -10,4 +10,9 @@ public interface UserService {
     public User selectUser(String username);
 
     public int insertone(User user);
+
+    public int activate(String code);
+
+    public int updateState(String code);
+
 }

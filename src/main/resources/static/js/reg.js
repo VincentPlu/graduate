@@ -35,17 +35,22 @@ function loginpass() {
 function regfun() {
     var loginname = $("#userLoginName").val();
     var userpass = $("#userPass").val();
+    var usermail = $("#userMail").val();
 
     $.ajax({
         url:"/reguer",
         type:"post",
         data:{
-            "loginname":loginname,"userpass":userpass
+            "loginname":loginname,"userpass":userpass,"usermail":usermail
         },
         success: function (result) {
             if (result == "success") {
-                layer.msg('注册成功！')
-                location.href = "/login";
+                layer.msg('注册成功！请前往邮箱激活登录！', {
+                    icon: 1,
+                    time: 3000 //3秒关闭（如果不配置，默认是3秒）
+                }, function(){
+                    location.href = "/login";
+                });
             }
         }
 

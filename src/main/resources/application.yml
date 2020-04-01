@@ -59,6 +59,7 @@ spring:
     username: 869872053@qq.com
     password: sjopyrfmhrhbbcih
     default-ending: UTF-8
+
   redis:
     # Redis数据库索引（默认为0）
     database: 0

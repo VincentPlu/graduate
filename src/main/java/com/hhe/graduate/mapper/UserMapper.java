@@ -34,5 +34,7 @@ public interface UserMapper {
 
     int insertone(User record);
 
+    int activate(String code);
 
+    int updateState(String code);
 }
