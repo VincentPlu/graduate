@@ -11,6 +11,7 @@ dragon:
   #D:/Temp/profile/
   # 获取ip地址开关
   addressEnabled: true
+
 # web服务器配置
 server:
   # 服务器的HTTP端口，默认为80
@@ -56,8 +57,8 @@ spring:
   mail:
     #邮箱服务器地址
     host: smtp.qq.com
-    username: 869872053@qq.com
-    password: sjopyrfmhrhbbcih
+    username: hhefox2@foxmail.com
+    password: rxnvyiazjjzvdhff
     default-ending: UTF-8
 
   redis:
