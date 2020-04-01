@@ -215,7 +215,7 @@
     select
     <include refid="Base_Column_List" />
     from user
-    where user_loginName = #{username}
+    where user_loginName = #{username} and state = 1
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     update user
