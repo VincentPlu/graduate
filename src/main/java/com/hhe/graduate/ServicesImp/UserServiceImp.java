@@ -28,4 +28,9 @@ public class UserServiceImp implements UserService {
     public User selectUser(String username) {
         return userMapper.selectUser(username);
     }
+
+    @Override
+    public int insertone(User user) {
+        return userMapper.insertone(user);
+    }
 }

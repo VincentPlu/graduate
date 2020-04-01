@@ -6,6 +6,7 @@
     <title>注册界面</title>
     <link rel="stylesheet" href=" /public/layui/css/layui.css" media="all"/>
     <link rel="stylesheet" href=" /css/login.css" media="all"/>
+    <link rel="stylesheet" href=" /public/layui/css/layer.css" media="all"/>
     <style>
         /* 覆盖原框架样式 */
         .layui-elem-quote{background-color: inherit!important;}
@@ -67,22 +68,22 @@
         <legend>欢迎注册</legend>
     </fieldset>
     <div class="layui-row layui-col-space15">
-        <form class="layui-form zyl_pad_01">
+        <form class="layui-form zyl_pad_01" onsubmit="return false;">
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
-                    <input type="text" name="userLoginName" lay-verify="required|userName" autocomplete="off" placeholder="账号" class="layui-input">
+                    <input type="text" id="userLoginName" name="userLoginName" lay-verify="required|userName" onblur="loginName()" autocomplete="off" placeholder="账号" class="layui-input">
                     <i class="layui-icon layui-icon-username zyl_lofo_icon"></i>
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
-                    <input type="password" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
+                    <input type="password" id="userPass" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="密码" class="layui-input">
                     <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
                 <div class="layui-form-item">
-                    <input type="password" name="userPass" lay-verify="required|pass" autocomplete="off" placeholder="确认密码" class="layui-input">
+                    <input type="password" id="userPass1" name="userPass" lay-verify="required|pass" autocomplete="off" onblur="loginpass()" placeholder="确认密码" class="layui-input">
                     <i class="layui-icon layui-icon-password zyl_lofo_icon"></i>
                 </div>
             </div>
@@ -100,7 +101,7 @@
                 </div>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
-                <button class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="login">立即注册</button>
+                <button class="layui-btn layui-btn-fluid" onclick="regfun()">立即注册</button>
             </div>
             <div class="layui-col-sm12 layui-col-md12">
                 <a href="/login" class="layui-form-mid layui-word-aux layui-col-sm-offset1">登录</a>
@@ -116,12 +117,15 @@
 <script type="text/javascript" src=" /public/jquery/jquery-3.4.1.js"></script>
 <!-- Layui Js -->
 <script type="text/javascript" src=" /public/layui/layui.js"></script>
+<script type="text/javascript" src=" /public/layui/layer.js"></script>
 <!-- Jqarticle Js -->
 <script type="text/javascript" src=" /assembly/jparticle.min.js"></script>
 <!-- ZylVerificationCode Js
 <script type="text/javascript" src=" /assembly/zylVerificationCode.js"></script>-->
 <!--login Js-->
+<script type="text/javascript" src="/js/reg.js"></script>
 <script type="text/javascript" src="/js/login.js"></script>
+
 <script type="text/javascript">
 
 </script>

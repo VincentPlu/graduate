@@ -341,4 +341,17 @@
       del_flag = #{delFlag,jdbcType=INTEGER}
     where id = #{id,jdbcType=VARCHAR}
   </update>
+  <insert id="insertone" parameterType="com.hhe.graduate.bean.User">
+    insert into user (id, user_name, user_loginName, user_pass,
+    user_sex, user_head, user_integrals,
+    user_type, user_email, user_remark,
+    user_create_time, update_time, del_flag
+    )
+    values (#{id,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR}, #{userLoginname,jdbcType=VARCHAR}, #{userPass,jdbcType=VARCHAR},
+    #{userSex,jdbcType=VARCHAR}, #{userHead,jdbcType=VARCHAR}, #{userIntegrals,jdbcType=INTEGER},
+    #{userType,jdbcType=CHAR}, #{userEmail,jdbcType=VARCHAR}, #{userRemark,jdbcType=VARCHAR},
+    #{userCreateTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{delFlag,jdbcType=INTEGER}
+    )
+  </insert>
+
 </mapper>
