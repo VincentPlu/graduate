@@ -14,8 +14,8 @@ public class MailUtils {
     @Autowired
     private JavaMailSenderImpl javaMailSender;
 
-    @Value("{mail.fromMail.addr}")
-    private String formail;
+    //@Value("{mail.fromMail.addr}")
+    //private String formail;
     /**
      * @param useremail 接收激活码邮箱
      * @param code   激活码
@@ -29,7 +29,7 @@ public class MailUtils {
         message.setSubject(title);
         message.setText(text, true);
         message.setTo(useremail);
-        message.setFrom(formail);
+        message.setFrom("hhefox2@foxmail.com");
 
         javaMailSender.send(mimeMessage);
 

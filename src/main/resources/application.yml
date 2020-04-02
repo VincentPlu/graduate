@@ -29,9 +29,6 @@ server:
     #配置post提交的参数信息大小设置，不限制
     max-http-form-post-size: -1
 #自定义属性，谁发送邮件
-mail:
-  fromMail:
-    addr: hhefox2@foxmail.com
 spring:
   mvc:
     view:
@@ -58,19 +55,23 @@ spring:
     #邮箱服务器地址
     host: smtp.qq.com
     username: hhefox2@foxmail.com
-    password: rxnvyiazjjzvdhff
+    password: oakqrpogixypdcig
     default-ending: UTF-8
-    protocol: smtp
+    port: 465
     properties:
       mail:
         smtp:
+          ssl:
+            trust: smtp.qq.com
+            enable: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
           auth: true
           starttls:
             enable: true
             required: true
-          socketFactory:
-            port: 465
-            class: javax.net.ssl.SSLSocketFactory
+
 
   redis:
     # Redis数据库索引（默认为0）

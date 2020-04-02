@@ -8,6 +8,7 @@ import com.hhe.graduate.util.MailUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -45,7 +46,7 @@ public class UserServiceImp implements UserService {
         //设置账户默认状态 0：未激活
         user.setState(0);
         Date date = new Date();
-        //SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+        //SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         user.setUserCreateTime(date);
         //通过用户填写的邮箱，发送激活邮件
         try {
@@ -56,6 +57,8 @@ public class UserServiceImp implements UserService {
 
         return userMapper.insertone(user);
     }
+
+
 
     @Override
     public int activate(String code) {
