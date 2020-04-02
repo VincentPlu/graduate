@@ -9,10 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.UUID;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class reg {
@@ -47,13 +44,19 @@ public class reg {
     @ResponseBody
     public String reguer(@RequestParam("loginname") String loginname,
                          @RequestParam("userpass") String userpass,
-                         @RequestParam("usermail") String usermail) {
+                         @RequestParam("usermail") String usermail, HttpServletRequest request) {
         User user = new User();
         user.setUserName(loginname);
         user.setUserLoginname(loginname);
         user.setUserPass(userpass);
         user.setUserEmail(usermail);
-        int result = userService.insertone(user);
+        String serviceIp = request.getRemoteAddr();
+        Integer servicePort= request.getLocalPort();
+        if (serviceIp.equals("0:0:0:0:0:0:0:1")) {
+            serviceIp = "127.0.0.1";
+        }
+        String url = serviceIp+":"+servicePort.toString();
+        int result = userService.insertone(user, url);
         if (result > 0) {
             return "success";
         }

@@ -9,7 +9,7 @@ public interface UserService {
 
     public User selectUser(String username);
 
-    public int insertone(User user);
+    public int insertone(User user, String url);
 
     public int activate(String code);
 

@@ -219,8 +219,8 @@ class GraduateApplicationTests {
                 "            </div>";
         message.setSubject(title);
         message.setText(text, true);
-        message.setTo("597550427@qq.com");
-        message.setFrom("1498592764@qq.com");
+        message.setTo("hhefox2@foxmail.com");
+        message.setFrom("hhefox2@foxmail.com");
 
         javaMailSender.send(mimeMessage);
     }

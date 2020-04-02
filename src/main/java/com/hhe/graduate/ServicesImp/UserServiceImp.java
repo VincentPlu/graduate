@@ -36,7 +36,7 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public int insertone(User user) {
+    public int insertone(User user, String url) {
         user.setId(UUID.randomUUID().toString());
         user.setUserSex("0");
         user.setUserType("1");
@@ -49,7 +49,7 @@ public class UserServiceImp implements UserService {
         user.setUserCreateTime(date);
         //通过用户填写的邮箱，发送激活邮件
         try {
-            mailUtils.sendMail(user.getUserEmail(), user.getCode());
+            mailUtils.sendMail(user.getUserEmail(), user.getCode(), url);
         } catch (Exception e) {
             e.printStackTrace();
         }
