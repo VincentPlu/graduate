@@ -60,7 +60,6 @@ spring:
     username: hhefox2@foxmail.com
     password: rxnvyiazjjzvdhff
     default-ending: UTF-8
-    port: 465
     protocol: smtp
     properties:
       mail:
