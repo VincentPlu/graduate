@@ -12,7 +12,7 @@ dragon:
   # 获取ip地址开关
   addressEnabled: true
 
-  serverurl: 47.114.163.135
+  serverurl: 47.114.163.135:8080
 
 
 # web服务器配置

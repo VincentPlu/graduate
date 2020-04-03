@@ -5,6 +5,7 @@ import com.hhe.graduate.Services.UserService;
 import com.hhe.graduate.bean.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -22,8 +23,13 @@ class GraduateApplicationTests {
 
     @Autowired
     JavaMailSenderImpl javaMailSender;
+
+    @Value("${dragon.serverurl}")
+    private String serverurl;
+
     @Test
     void contextLoads() {
+        System.out.println(serverurl);
     }
 
     @Test
