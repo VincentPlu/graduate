@@ -12,6 +12,9 @@ dragon:
   # 获取ip地址开关
   addressEnabled: true
 
+  serverurl: 47.114.163.135
+
+
 # web服务器配置
 server:
   # 服务器的HTTP端口，默认为80

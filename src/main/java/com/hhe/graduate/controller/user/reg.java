@@ -6,6 +6,7 @@ import com.hhe.graduate.mapper.UserMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,9 @@ public class reg {
     private UserMapper userMapper;
     @Autowired
     private UserService userService;
+
+    @Value("${dragon.serverurl}")
+    private String serverurl;
 
     /**
      * 用户登录
@@ -76,7 +80,7 @@ public class reg {
             e.printStackTrace();
         }*/
 
-        //int result = userService.insertone(user, url);
+        int result = userService.insertone(user, serverurl);
         if (result > 0) {
             log.info("用户注册成功！");
             return "success";
