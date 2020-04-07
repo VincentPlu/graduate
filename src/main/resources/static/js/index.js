@@ -10,3 +10,16 @@ layui.use(['element', 'carousel'],function () {
         //,anim: 'updown' //切换动画方式
     });
 })
+
+$().ready(function(){
+    let title = document.title;
+    switch (title){
+        case "网站首页":
+            document.getElementById("nvr_index").className = "layui-nav-item layui-this";
+            break;
+        case "分类查询":
+            document.getElementById("nvr_search").className = "layui-nav-item layui-this";
+            break;
+    }
+
+});

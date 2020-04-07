@@ -23,7 +23,7 @@ public class ShiroConfig {
         // 添加Shiro内置过滤器
         Map<String, String> filterMap = new LinkedHashMap<String, String>();
         // anon无需认证(登录)访问 authc必须认证才可以访问 user如果使用rememberMe功能才可以访问 perms该资源必须得到资源权限才可以访问 role该资源必须得到角色权限才可以访问
-        filterMap.put("/pages/index", "authc");
+        filterMap.put("/pages/index", "anon");
 
         // 修改调整的登录页面
         shiroFilterFactoryBean.setLoginUrl("/login");
