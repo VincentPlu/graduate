@@ -8,10 +8,10 @@
 <div th:replace="common/header :: jsAndCss(~{::script})">
     <!--将需要额外添加的js文件写入到div之中即可，并且上方花括号中需要写入 script-->
     <script type="text/javascript"   th:src="@{/js/index.js}"></script>
+    <script type="text/javascript" th:src="@{/search.js}"></script>
 </div>
 <!--引入页面导航栏模块-->
 <div th:include="common/navbar :: nav_top"></div>
-<!--页面主体开始-->
 <!--图片轮播框-->
 <div class="layui-carousel" id="lunbo">
     <div carousel-item>
@@ -20,5 +20,21 @@
         <div><img alt="轮播图片" src="/images/白云四桶.jpg" class="lunboPic"></div>
     </div>
 </div>
+<!--页面主体开始-->
+<div class="layui-row" style="margin-top: 90px;">
+    <div class="layui-row" style="text-align: center"><h1 class="layui-anim layui-anim-scaleSpring">分/类/查/询</h1></div>
+    <div class="layui-row" style="text-align: center;margin-top: 10px;"><h3>Classification Search</h3></div>
+</div>
+<!--搜索框-->
+<div class="layui-row" style="margin-top: 30px;">
+    <div class="layui-col-md4 layui-col-md-offset4">
+        <input type="text" id="search" style="border-radius: 15px;line-height: 40px;width: 100%;">
+    </div>
+    <div class="layui-col-md1">
+        <i class="layui-icon layui-icon-search" style="font-size:40px;text-align: center;" onclick="search()"></i>
+    </div>
+</div>
+<!--引入页面导航栏模块-->
+<div th:include="common/footer :: footer" style="margin-top: 160px;"></div>
 </body>
 </html>
