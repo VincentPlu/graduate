@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文章浏览</title>
+</head>
+<body>
+<div th:replace="common/header :: jsAndCss(~{::script})">
+    <!--将需要额外添加的js文件写入到div之中即可，并且上方花括号中需要写入 script-->
+    <script type="text/javascript"   th:src="@{/js/index.js}"></script>
+</div>
+<!--引入页面导航栏模块-->
+<div th:include="common/navbar :: nav_top"></div>
+<!--页面主体开始-->
+<!--图片轮播框-->
+<div class="layui-carousel" id="lunbo">
+    <div carousel-item>
+        <div><img alt="轮播图片" src="/images/first.jpg" class="lunboPic"></div>
+        <div><img alt="轮播图片" src="/images/第二张轮播图.jpg" class="lunboPic"></div>
+        <div><img alt="轮播图片" src="/images/白云四桶.jpg" class="lunboPic"></div>
+    </div>
+</div>
+<div class="layui-row">
+    <div id="article_content" class="layui-col-xs6 layui-col-sm6 layui-col-md4">
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div >
+            <div id="news_head">新/闻/资/讯</div>
+            <div id="news_search"><input type="text"/><i class="layui-icon-search"></i></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--引入页面导航栏模块-->
+<div th:include="common/footer :: footer" style="margin-top: 160px;"></div>
+
+
+</body>
+</html>
