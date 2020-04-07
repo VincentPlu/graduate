@@ -20,6 +20,9 @@ $().ready(function(){
         case "分类查询":
             document.getElementById("nvr_search").className = "layui-nav-item layui-this";
             break;
+        case "新闻资讯":
+            document.getElementById("nvr_news").className = "layui-nav-item layui-this";
+            break;
     }
 
 });
