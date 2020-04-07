@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 
 @Controller
-public class reg {
+public class Reg {
 
-    public static final Logger log = LoggerFactory.getLogger(reg.class);
+    public static final Logger log = LoggerFactory.getLogger(Reg.class);
 
 
     @Autowired
