@@ -37,4 +37,5 @@ public interface UserMapper {
     int activate(String code);
 
     int updateState(String code);
+
 }
