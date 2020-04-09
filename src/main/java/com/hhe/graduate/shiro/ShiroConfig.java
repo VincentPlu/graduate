@@ -33,6 +33,15 @@ public class ShiroConfig {
     }
 
     /**
+     * 创建Realm
+     * @return
+     */
+    @Bean("userRealm")
+    public UserRealm getRealm() {
+        return new UserRealm();
+    }
+
+    /**
      * 创建DefaultWebSecurityManager
      * @param userRealm
      * @return
@@ -45,13 +54,6 @@ public class ShiroConfig {
         return securityManager;
     }
 
-    /**
-     * 创建Realm
-     * @return
-     */
-    @Bean("userRealm")
-    public UserRealm getRealm() {
-        return new UserRealm();
-    }
+
 
 }

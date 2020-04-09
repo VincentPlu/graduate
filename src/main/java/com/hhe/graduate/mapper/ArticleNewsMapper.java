@@ -4,8 +4,13 @@ import com.hhe.graduate.bean.ArticleNews;
 import com.hhe.graduate.bean.ArticleNewsExample;
 import com.hhe.graduate.bean.ArticleNewsWithBLOBs;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.MapKey;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Mapper
 public interface ArticleNewsMapper {
     long countByExample(ArticleNewsExample example);
 
@@ -34,4 +39,6 @@ public interface ArticleNewsMapper {
     int updateByPrimaryKeyWithBLOBs(ArticleNewsWithBLOBs record);
 
     int updateByPrimaryKey(ArticleNews record);
+
+    List<ArticleNewsWithBLOBs> selectAll();
 }

@@ -20,9 +20,6 @@ public class Login {
 
     public static final Logger log = LoggerFactory.getLogger(Login.class);
 
-    @Autowired
-    private UserMapper userMapper;
-
     @GetMapping("login")
     public String login(){
         return "user/login";

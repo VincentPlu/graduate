@@ -90,3 +90,5 @@ mybatis:
   mapper-locations: classpath:/static/mapper/*.xml
   # 注意：对应实体类的路径
   type-aliases-package: com.hhe.graduate.bean
+  # 加载全局的配置文件
+  configLocation: classpath:/static/mybatis/mybatis-config.xml

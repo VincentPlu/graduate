@@ -27,13 +27,16 @@
                 <center><p style="font-size: 25px;">新/闻/资/讯</p></center>
             </div>
             <div class="layui-card-body">
-                <li>
-                    <h3>
-                        <a>环境保护</a><p>2018-10-28</p>
-                    </h3>
-                    <p>截止12月，生态环境更新了。。。</p>
-                    <a>查看全文</a>
-                </li>
+                <ul>
+                    <li th:each="article:${articleNews}">
+                        <h4>
+                            <a th:href="${article.newsUrl}">环境保护</a><p th:text="${article.timeTime}">2018-10-28</p>
+                        </h4>
+                        <p th:text="${article.description}">截止12月，生态环境更新了。。。</p>
+                        <a th:href="${article.newsUrl}">查看全文</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </div>

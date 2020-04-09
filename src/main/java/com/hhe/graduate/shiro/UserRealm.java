@@ -1,6 +1,6 @@
 package com.hhe.graduate.shiro;
 
-import com.hhe.graduate.ServicesImp.UserServiceImp;
+import com.hhe.graduate.Services.UserService;
 import com.hhe.graduate.bean.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class UserRealm extends AuthorizingRealm {
     @Autowired
-    UserServiceImp userServiceImp;
+    UserService userService;
 
     /**
      * 执行授权逻辑
@@ -41,7 +41,7 @@ public class UserRealm extends AuthorizingRealm {
 
         UsernamePasswordToken token = (UsernamePasswordToken)authenticationToken;
 
-        User user = userServiceImp.selectUser(token.getUsername());
+        User user = userService.selectUser(token.getUsername());
         if (user == null) {
                 return null;
         }
